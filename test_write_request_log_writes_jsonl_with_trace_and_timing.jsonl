@@ -1,0 +1,1 @@
+{"timestamp": "2026-11-02T19:08:57.803+00:00", "trace_id": "trace-123", "method": "POST", "route": "/ask", "request_text": "Aadhaar [AADHAAR_REDACTED], PAN [PAN_REDACTED], [ACCOUNT_REDACTED]", "duration_ms": 2500.0}
