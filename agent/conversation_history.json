@@ -541,8 +541,144 @@
       {
         "role": "assistant",
         "content": "EMI Calculation Rules: EMI is usually calculated using the principal amount, the applicable interest rate, and the loan tenure. For reducing-balance loans, interest is charged on the outstanding principal, so early EMIs are more interest-heavy and later EMIs are more principal-heavy. Changes in rate type, fees, or repayment frequency can alter the monthly EMI even when the total loan amount remains the same."
+      },
+      {
+        "role": "user",
+        "content": "How can I check the status of my loan application?"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 1637767; escalation score: 0.9467. Escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "How can I check the status of my loan application?"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 1637767; escalation score: 0.9467. Escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "How can I check the status of my loan application?"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 1637767; escalation score: 0.9467. Escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "How is my EMI calculated?"
+      },
+      {
+        "role": "assistant",
+        "content": "EMI Calculation Rules: EMI is usually calculated using the principal amount, the applicable interest rate, and the loan tenure. For reducing-balance loans, interest is charged on the outstanding principal, so early EMIs are more interest-heavy and later EMIs are more principal-heavy. Changes in rate type, fees, or repayment frequency can alter the monthly EMI even when the total loan amount remains the same."
+      },
+      {
+        "role": "user",
+        "content": "How can I check the status of my loan application?"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 1637767; escalation score: 0.9467. Escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "How can I check the status of my loan application?"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 1637767; escalation score: 0.9467. Escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "How can I check the status of my loan application?"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 1637767; escalation score: 0.9467. Escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "How can I check the status of my loan application?"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 1637767; escalation score: 0.9467. Escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "Check status for LOAN APPLICATION-0039"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 1637767; escalation score: 0.9467. Escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "LOAN APPLICATION-0032"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Submitted; loan amount: INR 118994; escalation score: 0.6667. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "Check status for LOAN APPLICATION-0045"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Submitted; loan amount: INR 1342980; escalation score: 0.1733. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "How is my EMI calculated?"
+      },
+      {
+        "role": "assistant",
+        "content": "EMI Calculation Rules: EMI is usually calculated using the principal amount, the applicable interest rate, and the loan tenure. For reducing-balance loans, interest is charged on the outstanding principal, so early EMIs are more interest-heavy and later EMIs are more principal-heavy. Changes in rate type, fees, or repayment frequency can alter the monthly EMI even when the total loan amount remains the same."
+      },
+      {
+        "role": "user",
+        "content": "What are the eligibility requirements for a personal loan?"
+      },
+      {
+        "role": "assistant",
+        "content": "Personal Loan Eligibility: Personal loan eligibility depends on income stability, repayment capacity, and a clean credit profile. Borrowers usually need a regular source of income, a minimum service history with the bank, and a debt-to-income ratio that remains within the credit policy. For existing customers with a strong repayment record, the bank may offer faster approval with lower documentation requirements."
+      },
+      {
+        "role": "user",
+        "content": "What documents are required for KYC?"
+      },
+      {
+        "role": "assistant",
+        "content": "KYC Document Requirements: KYC documentation usually includes a valid identity proof, address proof, and a completed customer information form. For high-value or riskier profiles, the bank may ask for supplemental documents such as proof of income, business registration, or a recent bank statement. KYC verification is required before disbursement and before any major account or card changes are allowed."
+      },
+      {
+        "role": "user",
+        "content": "What are the eligibility requirements for a personal loan?"
+      },
+      {
+        "role": "assistant",
+        "content": "Personal Loan Eligibility: Personal loan eligibility depends on income stability, repayment capacity, and a clean credit profile. Borrowers usually need a regular source of income, a minimum service history with the bank, and a debt-to-income ratio that remains within the credit policy. For existing customers with a strong repayment record, the bank may offer faster approval with lower documentation requirements."
+      },
+      {
+        "role": "user",
+        "content": "what is the eligibility for education loan?"
+      },
+      {
+        "role": "assistant",
+        "content": "Education Loan Eligibility: Education loans are typically available for courses from recognized institutions and for applicants with acceptable academic or employment history. The loan may require proof of admission, fee schedules, and the co-applicant relationship for larger sanctioned amounts. Institutions with strong placement records and lower default risk often receive more favorable underwriting terms."
+      },
+      {
+        "role": "user",
+        "content": "Status of LOAN APPLICATION-0045"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Submitted; loan amount: INR 1342980; escalation score: 0.1733. No escalation recommended."
       }
     ],
-    "record_id": "LOAN APPLICATION-0039"
+    "record_id": "LOAN APPLICATION-0045"
   }
 }
