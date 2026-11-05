@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import re
 import sys
 from time import perf_counter
 from typing import Literal
@@ -10,7 +11,7 @@ from uuid import uuid4
 from chromadb import PersistentClient
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 import uvicorn
 
 from api.structured_logging import write_request_log
@@ -52,6 +53,13 @@ class AddDocumentRequest(BaseModel):
 	doc_id: str = Field(pattern=r"^[A-Za-z0-9_-]{3,64}$")
 	title: str = Field(min_length=1, max_length=200)
 	text: str = Field(min_length=1, max_length=50000)
+
+	@field_validator("doc_id", mode="before")
+	@classmethod
+	def normalize_doc_id(cls, value: object) -> object:
+		if isinstance(value, str):
+			return re.sub(r"\s+", "-", value.strip())
+		return value
 
 
 class AddDocumentResponse(BaseModel):
