@@ -435,5 +435,114 @@
       }
     ],
     "record_id": ""
+  },
+  "161b40c4-943f-4916-ae9b-a7e968d1f7cd": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "How can I check the status of my loan application?"
+      },
+      {
+        "role": "assistant",
+        "content": "Please include the loan application ID."
+      },
+      {
+        "role": "user",
+        "content": "0005"
+      },
+      {
+        "role": "assistant",
+        "content": "I don't know. The retrieved context does not support an answer to this question."
+      },
+      {
+        "role": "user",
+        "content": "How can I check the status of my loan application?"
+      },
+      {
+        "role": "assistant",
+        "content": "Please include the loan application ID."
+      },
+      {
+        "role": "user",
+        "content": "LOAN APPLICATION-0005"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 5849420; escalation score: 0.2000. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "LOAN APPLICATION-0001"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 749255; escalation score: 0.3067. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "LOAN APPLICATION-0002"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Approved; loan amount: INR 2082502; escalation score: 0.3867. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "LOAN APPLICATION-0003"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Approved; loan amount: INR 3199458; escalation score: 0.0400. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "LOAN APPLICATION-0049"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Submitted; loan amount: INR 369118; escalation score: 0.3200. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "LOAN APPLICATION-0050"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Approved; loan amount: INR 5503628; escalation score: 0.6667. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "LOAN APPLICATION-0051"
+      },
+      {
+        "role": "assistant",
+        "content": "Loan application not found: LOAN APPLICATION-0051"
+      },
+      {
+        "role": "user",
+        "content": "LOAN APPLICATION-0039"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 1637767; escalation score: 0.9467. Escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "How is my EMI calculated?"
+      },
+      {
+        "role": "assistant",
+        "content": "EMI Calculation Rules: EMI is usually calculated using the principal amount, the applicable interest rate, and the loan tenure. For reducing-balance loans, interest is charged on the outstanding principal, so early EMIs are more interest-heavy and later EMIs are more principal-heavy. Changes in rate type, fees, or repayment frequency can alter the monthly EMI even when the total loan amount remains the same."
+      },
+      {
+        "role": "user",
+        "content": "How is my EMI calculated?"
+      },
+      {
+        "role": "assistant",
+        "content": "EMI Calculation Rules: EMI is usually calculated using the principal amount, the applicable interest rate, and the loan tenure. For reducing-balance loans, interest is charged on the outstanding principal, so early EMIs are more interest-heavy and later EMIs are more principal-heavy. Changes in rate type, fees, or repayment frequency can alter the monthly EMI even when the total loan amount remains the same."
+      }
+    ],
+    "record_id": "LOAN APPLICATION-0039"
   }
 }
