@@ -94,59 +94,6 @@ The project was verified with the repository’s test suite:
 
 This confirms the project is in a stable, submission-ready state for the Cred Banking & FinTech capstone.
 
-## Project Workflow
-
-```mermaid
-flowchart TD
-    subgraph indexing["Data and indexing"]
-        kb["Markdown knowledge base"] --> loader["Document loader"]
-        loader --> chunks["Fixed-size and sentence chunking"]
-        chunks --> embed["Local embeddings"]
-        embed --> fixed["Chroma: fixed collection"]
-        embed --> sentence["Chroma: sentence collection"]
-        dataset["Seeded loan dataset"] --> lookup["Loan status lookup"]
-    end
-
-    subgraph request["FastAPI request flow"]
-        user["User or API client"] --> api["FastAPI endpoints"]
-        api --> middleware["Trace ID, timing, and PII-safe logging"]
-        middleware -->|"POST /ask"| memory_load["Load conversation JSON"]
-        middleware -->|"POST /add-document"| adddoc["Validate and accept document"]
-        adddoc --> chunks
-        middleware --> log["logs/requests.jsonl"]
-        memory_load --> deadline["30s global graph deadline"]
-        deadline --> agent_graph["LangGraph invocation"]
-        agent_graph -. "thread_id checkpoint" .-> sqlite["checkpoints.sqlite"]
-
-        agent_graph --> guard["Mask PII and detect injection"]
-        guard -->|"Injection"| blocked["Blocked response"]
-        guard -->|"Allowed"| intent["Classify intent"]
-        intent -->|"Status"| status["Loan status node\nRetry + node timeout"]
-        status --> lookup
-        intent -->|"Policy question"| rag["Fixed-size RAG retrieval"]
-        fixed --> rag
-        rag --> grounding["Grounding check\nAnswer or fallback"]
-        status --> format["Format response"]
-        grounding --> format
-        blocked --> validate["Validate JSON Schema"]
-        format --> validate
-        validate --> memory_save["Save conversation JSON"]
-        memory_save --> response["API response"]
-    end
-
-    subgraph mcp["Separate MCP lookup"]
-        mcpclient["mcp/mcp_client.py"] --> mcpserver["Local FastMCP server\n127.0.0.1:8001/mcp"]
-        mcpserver --> lookup
-    end
-
-    subgraph evaluation["Evaluation"]
-        fixed --> strategy["Per-collection Precision@3 / Recall@3"]
-        sentence --> strategy
-        fixed --> triad["15-query RAG triad\nMOCK_LLM scoring"]
-        triad --> report["rag/rag_triad_report.json"]
-    end
-```
-
 ## Dataset Design Choices (Part 1, Task 1)
 
 The dataset is generated deterministically with weighted random sampling. Seed `75` is the first
@@ -469,3 +416,56 @@ deadline; a timeout cancels the graph task and raises a clear `GraphRunTimeoutEr
 Run `python -m agent.resilience_demo` to verify the policies. It simulates a transient node 
 failure twice and confirms recovery on attempt three, then demonstrates a cooperative per-node 
 timeout and a global timeout that cancels a slow node before its downstream node executes.
+
+## Project Workflow
+
+```mermaid
+flowchart TD
+    subgraph indexing["Data and indexing"]
+        kb["Markdown knowledge base"] --> loader["Document loader"]
+        loader --> chunks["Fixed-size and sentence chunking"]
+        chunks --> embed["Local embeddings"]
+        embed --> fixed["Chroma: fixed collection"]
+        embed --> sentence["Chroma: sentence collection"]
+        dataset["Seeded loan dataset"] --> lookup["Loan status lookup"]
+    end
+
+    subgraph request["FastAPI request flow"]
+        user["User or API client"] --> api["FastAPI endpoints"]
+        api --> middleware["Trace ID, timing, and PII-safe logging"]
+        middleware -->|"POST /ask"| memory_load["Load conversation JSON"]
+        middleware -->|"POST /add-document"| adddoc["Validate and accept document"]
+        adddoc --> chunks
+        middleware --> log["logs/requests.jsonl"]
+        memory_load --> deadline["30s global graph deadline"]
+        deadline --> agent_graph["LangGraph invocation"]
+        agent_graph -. "thread_id checkpoint" .-> sqlite["checkpoints.sqlite"]
+
+        agent_graph --> guard["Mask PII and detect injection"]
+        guard -->|"Injection"| blocked["Blocked response"]
+        guard -->|"Allowed"| intent["Classify intent"]
+        intent -->|"Status"| status["Loan status node\nRetry + node timeout"]
+        status --> lookup
+        intent -->|"Policy question"| rag["Fixed-size RAG retrieval"]
+        fixed --> rag
+        rag --> grounding["Grounding check\nAnswer or fallback"]
+        status --> format["Format response"]
+        grounding --> format
+        blocked --> validate["Validate JSON Schema"]
+        format --> validate
+        validate --> memory_save["Save conversation JSON"]
+        memory_save --> response["API response"]
+    end
+
+    subgraph mcp["Separate MCP lookup"]
+        mcpclient["mcp/mcp_client.py"] --> mcpserver["Local FastMCP server\n127.0.0.1:8001/mcp"]
+        mcpserver --> lookup
+    end
+
+    subgraph evaluation["Evaluation"]
+        fixed --> strategy["Per-collection Precision@3 / Recall@3"]
+        sentence --> strategy
+        fixed --> triad["15-query RAG triad\nMOCK_LLM scoring"]
+        triad --> report["rag/rag_triad_report.json"]
+    end
+```
