@@ -84,7 +84,10 @@ def classify_intent(state: AgentState) -> dict[str, Any]:
     match = re.search(r"LOAN\s+APPLICATION\s*-\s*\d+", query, re.IGNORECASE)
     asks_for_status = "status" in query.lower()
     record_id = match.group(0).upper() if match else ""
-    if asks_for_status and not record_id:
+    refers_to_previous_application = bool(
+        re.search(r"\b(?:it|its|that|this|same)\b", query, re.IGNORECASE)
+    )
+    if asks_for_status and not record_id and refers_to_previous_application:
         record_id = state.get("last_record_id", "")
     return {
         "intent": "status" if match or asks_for_status else "rag",
