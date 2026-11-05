@@ -8,6 +8,14 @@ a LangGraph orchestration layer, tool calling, memory
 guardrails, MCP tool exposure, FastAPI deployment, and 
 end-to-end evaluation under a zero-API-key `MOCK_LLM` mode.
 
+## MOCK_LLM and API-Key-Free Operation
+
+The complete project workflow—including the RAG agent, evaluations, FastAPI
+endpoints, MCP tools, checkpointing, and resilience demonstrations—runs without
+LLM API credentials. Agent responses and RAG-triad judging use deterministic
+`MOCK_LLM` behavior; retrieval embeddings run locally with SentenceTransformers.
+No API keys are required to run the project.
+
 ## Project Overview
 
 This repository implements a loan-support workflow with local retrieval, structured tools,
