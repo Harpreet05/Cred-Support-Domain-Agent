@@ -16,7 +16,7 @@ INJECTION_PATTERNS = [
 	re.compile(r"bypass\s+(the\s+)?(guardrails|safety|rules)", re.IGNORECASE),
 ]
 
-GROUNDING_REFUSAL = "I don't know. The retrieved context does not support an answer to this question."
+GROUNDING_REFUSAL = "I don't know. I can only help with loan eligibility queries and loan application status."
 
 
 def mask_pii(text: str) -> str:
