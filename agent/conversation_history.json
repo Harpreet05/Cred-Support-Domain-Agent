@@ -677,8 +677,130 @@
       {
         "role": "assistant",
         "content": "Status: Submitted; loan amount: INR 1342980; escalation score: 0.1733. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "LOAN APPLICATION-0021"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Disbursed; loan amount: INR 220465; escalation score: 0.1600. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "How is my EMI calculated?"
+      },
+      {
+        "role": "assistant",
+        "content": "EMI Calculation Rules: EMI is usually calculated using the principal amount, the applicable interest rate, and the loan tenure. For reducing-balance loans, interest is charged on the outstanding principal, so early EMIs are more interest-heavy and later EMIs are more principal-heavy. Changes in rate type, fees, or repayment frequency can alter the monthly EMI even when the total loan amount remains the same."
+      },
+      {
+        "role": "user",
+        "content": "eligibility for vehicle loan"
+      },
+      {
+        "role": "assistant",
+        "content": "Auto Loan Eligibility: Auto loans require the applicant to have a steady income and a valid identity and address profile, and the financed vehicle must meet the lender's eligibility checklist. The bank also reviews the applicant's repayment track record and may cap the loan-to-value ratio to keep the credit exposure manageable. Used vehicles often face stricter documentation and age limits than new vehicles."
+      },
+      {
+        "role": "user",
+        "content": "What are the eligibility requirements for a personal loan?"
+      },
+      {
+        "role": "assistant",
+        "content": "Personal Loan Eligibility: Personal loan eligibility depends on income stability, repayment capacity, and a clean credit profile. Borrowers usually need a regular source of income, a minimum service history with the bank, and a debt-to-income ratio that remains within the credit policy. For existing customers with a strong repayment record, the bank may offer faster approval with lower documentation requirements."
+      },
+      {
+        "role": "user",
+        "content": "status of loan application-0009"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Submitted; loan amount: INR 1233501; escalation score: 0.1333. No escalation recommended."
+      },
+      {
+        "role": "user",
+        "content": "What documents are required for KYC?"
+      },
+      {
+        "role": "assistant",
+        "content": "KYC Document Requirements: KYC documentation usually includes a valid identity proof, address proof, and a completed customer information form. For high-value or riskier profiles, the bank may ask for supplemental documents such as proof of income, business registration, or a recent bank statement. KYC verification is required before disbursement and before any major account or card changes are allowed."
+      },
+      {
+        "role": "user",
+        "content": "I want to cook rice. Step by step recipe"
+      },
+      {
+        "role": "assistant",
+        "content": "I don't know. The retrieved context does not support an answer to this question."
+      },
+      {
+        "role": "user",
+        "content": "I want to make tea step by step recipe"
+      },
+      {
+        "role": "assistant",
+        "content": "I don't know. The retrieved context does not support an answer to this question."
+      },
+      {
+        "role": "user",
+        "content": "I want to make rice"
+      },
+      {
+        "role": "assistant",
+        "content": "I don't know. I can only help with loan eligibility queries and loan application status."
+      },
+      {
+        "role": "user",
+        "content": "How is my EMI calculated?"
+      },
+      {
+        "role": "assistant",
+        "content": "EMI Calculation Rules: EMI is usually calculated using the principal amount, the applicable interest rate, and the loan tenure. For reducing-balance loans, interest is charged on the outstanding principal, so early EMIs are more interest-heavy and later EMIs are more principal-heavy. Changes in rate type, fees, or repayment frequency can alter the monthly EMI even when the total loan amount remains the same."
       }
     ],
-    "record_id": "LOAN APPLICATION-0045"
+    "record_id": "LOAN APPLICATION-0009"
+  },
+  "06112026": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Status for LOAN APPLICATION 0015"
+      },
+      {
+        "role": "assistant",
+        "content": "Please include the loan application ID."
+      },
+      {
+        "role": "user",
+        "content": "Status for LOAN APPLICATION 0015"
+      },
+      {
+        "role": "assistant",
+        "content": "Please include the loan application ID."
+      },
+      {
+        "role": "user",
+        "content": "Status for LOAN APPLICATION-0015"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Under Review; loan amount: INR 1234478; escalation score: 0.2267. No escalation recommended."
+      }
+    ],
+    "record_id": "LOAN APPLICATION-0015"
+  },
+  "03": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "status of loan application-0011"
+      },
+      {
+        "role": "assistant",
+        "content": "Status: Approved; loan amount: INR 2055215; escalation score: 0.1200. No escalation recommended."
+      }
+    ],
+    "record_id": "LOAN APPLICATION-0011"
   }
 }
